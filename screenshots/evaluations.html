@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evaluation View</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Aptos", "Avenir Next", "Segoe UI", sans-serif;
+        color: #eef2ff;
+        background:
+          radial-gradient(circle at top left, rgba(121, 242, 192, 0.18), transparent 28%),
+          radial-gradient(circle at top right, rgba(107, 168, 255, 0.16), transparent 22%),
+          linear-gradient(180deg, #071019 0%, #0d1420 100%);
+      }
+      .frame {
+        width: 1600px;
+        height: 900px;
+        padding: 40px;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 100%;
+        padding: 34px;
+        border-radius: 34px;
+        background: rgba(9, 14, 24, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.14);
+      }
+      .eyebrow {
+        color: #79f2c0;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 13px;
+      }
+      h1 {
+        margin: 10px 0 12px;
+        font-family: Georgia, serif;
+        font-size: 58px;
+        line-height: 0.98;
+      }
+      p {
+        color: #d4dbeb;
+        max-width: 860px;
+        line-height: 1.7;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 22px;
+        margin-top: 26px;
+      }
+      .panel {
+        border-radius: 24px;
+        background: rgba(18, 27, 43, 0.92);
+        border: 1px solid rgba(148, 163, 184, 0.12);
+        padding: 22px;
+      }
+      .plot {
+        position: relative;
+        height: 380px;
+        margin-top: 12px;
+      }
+      .gridline {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: rgba(148, 163, 184, 0.12);
+      }
+      .curve {
+        position: absolute;
+        inset: 30px 10px 26px 10px;
+      }
+      .curve svg {
+        width: 100%;
+        height: 100%;
+      }
+      .metric {
+        padding: 16px;
+        border-radius: 18px;
+        margin-bottom: 14px;
+        background: rgba(30, 41, 59, 0.74);
+      }
+      .metric strong {
+        display: block;
+        font-size: 28px;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="card">
+        <div class="eyebrow">Evaluation trend</div>
+        <h1>AI teams need one place to weigh quality, latency, and guardrail pass behavior together.</h1>
+        <p>
+          Instead of treating evals like an isolated notebook exercise, the console turns them into operator-facing
+          signal that shapes routing, approvals, and production confidence.
+        </p>
+        <div class="grid">
+          <div class="panel">
+            <div class="plot">
+              <div class="gridline" style="top: 15%"></div>
+              <div class="gridline" style="top: 35%"></div>
+              <div class="gridline" style="top: 55%"></div>
+              <div class="gridline" style="top: 75%"></div>
+              <div class="curve">
+                <svg viewBox="0 0 780 320" preserveAspectRatio="none">
+                  <path d="M30 235 C130 205, 220 185, 310 160 S520 108, 610 80 S700 58, 750 54" fill="none" stroke="#79f2c0" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M30 255 C130 236, 220 220, 310 198 S520 162, 610 140 S700 122, 750 118" fill="none" stroke="#6ba8ff" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="metric">
+              <span>Prompt quality</span>
+              <strong>91</strong>
+              <small>Best score in last 5 review cycles</small>
+            </div>
+            <div class="metric">
+              <span>Median latency</span>
+              <strong>1.8s</strong>
+              <small>Fallback routing under threshold</small>
+            </div>
+            <div class="metric">
+              <span>Guardrail pass rate</span>
+              <strong>96%</strong>
+              <small>Two workflows still require tighter external-answer controls</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
