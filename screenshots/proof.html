@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Validation Proof</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Consolas, "SFMono-Regular", monospace;
+        background: linear-gradient(180deg, #071019 0%, #0d1420 100%);
+        color: #eef2ff;
+      }
+      .frame {
+        width: 1600px;
+        height: 860px;
+        padding: 42px;
+        box-sizing: border-box;
+      }
+      .card {
+        height: 100%;
+        padding: 34px;
+        border-radius: 34px;
+        background: rgba(9, 14, 24, 0.92);
+        border: 1px solid rgba(148, 163, 184, 0.14);
+      }
+      .eyebrow {
+        color: #79f2c0;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 13px;
+        font-family: "Aptos", "Segoe UI", sans-serif;
+      }
+      h1 {
+        margin: 10px 0 26px;
+        font-family: Georgia, serif;
+        font-size: 58px;
+        line-height: 0.98;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .metric {
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(18, 27, 43, 0.92);
+      }
+      .metric strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 20px;
+      }
+      pre {
+        margin-top: 22px;
+        padding: 26px;
+        border-radius: 24px;
+        background: #020617;
+        border: 1px solid rgba(121, 242, 192, 0.28);
+        color: #d8e5ff;
+        line-height: 1.75;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="card">
+        <div class="eyebrow">Validation proof</div>
+        <h1>Operator-grade polish backed by tests, builds, and repo hygiene.</h1>
+        <div class="grid">
+          <div class="metric">
+            Tests
+            <strong>2 / 2 passed</strong>
+          </div>
+          <div class="metric">
+            Build
+            <strong>Production bundle generated</strong>
+          </div>
+          <div class="metric">
+            Governance
+            <strong>CI + CodeQL + Dependabot</strong>
+          </div>
+        </div>
+        <pre>npm test
+✓ src/App.test.tsx (2 tests)
+
+npm run build
+✓ production bundle generated
+
+Security baseline
+✓ CI workflow
+✓ CodeQL workflow
+✓ Dependabot config
+✓ SECURITY.md</pre>
+      </div>
+    </div>
+  </body>
+</html>
